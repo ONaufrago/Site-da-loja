@@ -1,7 +1,7 @@
-import fetch from 'node-fetch';
+const fetch = require('node-fetch');
 
-export async function handler(event, context) {
-    const url = 'https://sheets.googleapis.com/v4/spreadsheets/19OfPl4OBd7QOYq2AV_qFU0ddUBvUP9jkg9IbnI8Y8w0/values/A1:H?key=AIzaSyDsXyIrF1dW6cgbD2SSfJItPa2Lngv0_XQ'; // Substitua pelo URL da sua API
+exports.handler = async (event, context) => {
+    const url = 'https://api.example.com/products'; // Substitua pelo URL da sua API
 
     try {
         const response = await fetch(url);
@@ -19,4 +19,4 @@ export async function handler(event, context) {
             body: JSON.stringify({ message: error.message }),
         };
     }
-}
+};
