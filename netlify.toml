@@ -1,9 +1,8 @@
 [build]
-  publish = "src" # Diretório onde está o HTML e CSS
-  functions = "functions" # Diretório onde estão as funções
-
+  publish = "src"
+  functions = "functions"
 [build.environment]
-  NODE_VERSION = "14" # Ou a versão de Node.js que você está usando
+  NODE_VERSION = "14"
 
 [[redirects]]
   from = "/api/*"
