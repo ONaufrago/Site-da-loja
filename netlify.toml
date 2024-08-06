@@ -1,7 +1,11 @@
 [build]
-  base = ""
-  publish = "src"
-  functions = "functions"
+  publish = "src" # Diretório onde está o HTML e CSS
+  functions = "functions" # Diretório onde estão as funções
 
 [build.environment]
-  NODE_VERSION = "14"
+  NODE_VERSION = "14" # Ou a versão de Node.js que você está usando
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
