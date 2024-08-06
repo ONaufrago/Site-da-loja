@@ -1,6 +1,7 @@
 [build]
-  functions = "functions"
+  base = ""
   publish = "src"
+  functions = "functions"
 
-[functions]
-  directory = "functions"
+[build.environment]
+  NODE_VERSION = "14"
